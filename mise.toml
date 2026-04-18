@@ -1,8 +1,5 @@
 [env]
-_.path = [
-    "{{config_root}}/.venv/bin",
-    "{{config_root}}/node_modules/.bin",
-]
+_.path = ["{{config_root}}/.venv/bin", "{{config_root}}/node_modules/.bin"]
 
 [tools]
 python = "3.10"
@@ -18,11 +15,6 @@ hide = true
 
 [tasks."setup:python"]
 run = "poetry install"
-hide = true
-
-[tasks."setup:pre-commit"]
-run = "pre-commit install"
-depends = ["setup:python"]
 hide = true
 
 [tasks.setup]

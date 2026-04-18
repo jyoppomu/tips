@@ -1,0 +1,10 @@
+node_modules/
+site/
+public/
+dist/
+.venv/
+.remote/
+.github/
+images/
+package-lock.json
+poetry.lock

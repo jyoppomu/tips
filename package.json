@@ -13,7 +13,12 @@
     "prebuild:docs": "rimraf --glob site",
     "build:docs": "poetry run mkdocs build -d site",
     "build:site": "failsafe build:docs build:slides",
+    "prepare": "npm-run-all prepare:*",
+    "prepare:husky": "husky",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "lint-staged": {
+    "*.{js,mjs,cjs,ts,tsx,json,yml,yaml,md,css,toml}": "prettier --write"
   },
   "repository": {
     "type": "git",
@@ -40,5 +45,12 @@
     "npm-failsafe": "^1.4.0",
     "rimraf": "^6.0.1",
     "zenn-cli": "^0.3.1"
+  },
+  "devDependencies": {
+    "husky": "^9.1.7",
+    "lint-staged": "^15.2.11",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^3.4.2",
+    "prettier-plugin-toml": "^2.0.1"
   }
 }
