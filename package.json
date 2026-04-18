@@ -11,6 +11,7 @@
     "prebuild:slides": "rimraf --glob dist/slides",
     "build:slides": "marp --config .marprc.yml -I slides/src -o dist/slides",
     "postbuild:slides": "node scripts/assets.mjs --src slides/src --out dist/slides",
+    "prebuild:docs": "failsafe check:astro",
     "build:docs": "astro build",
     "build:site": "failsafe build:docs build:slides",
     "create:zenn": "zenn new:article",
@@ -22,8 +23,9 @@
     "prepare": "npm-run-all prepare:*",
     "prepare:husky": "husky",
     "z2q": "tsx scripts/z2q.ts",
-    "check": "tsc --noEmit -p tsconfig.scripts.json && astro check",
-    "pretest": "failsafe check",
+    "check:types": "tsc --noEmit -p tsconfig.scripts.json",
+    "check:astro": "astro check",
+    "pretest": "failsafe check:types",
     "test": "vitest run"
   },
   "lint-staged": {
