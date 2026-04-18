@@ -7,7 +7,7 @@ export default defineConfig({
   site: "https://jyoppomu.github.io",
   base: "/tips",
   outDir: "./dist",
-  publicDir: "./static",
+  publicDir: "./assets",
   markdown: {
     remarkPlugins: [remarkMath],
     rehypePlugins: [[rehypeKatex, { strict: "ignore" }]],
@@ -26,7 +26,6 @@ export default defineConfig({
       ],
       customCss: ["./src/styles/custom.css", "katex/dist/katex.min.css"],
       sidebar: [
-        { label: "TOP", slug: "index" },
         {
           label: "STATISTICS",
           items: [
