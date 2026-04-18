@@ -1,19 +1,19 @@
 # TIPS
 
-[![MkDocs](https://img.shields.io/badge/MkDocs-1.5.2-blue.svg)](https://www.mkdocs.org/)
+[![Astro](https://img.shields.io/badge/Astro-Starlight-ff5d01.svg)](https://starlight.astro.build/)
 
 ## Articles
 
 <!-- markdownlint-disable MD033 -->
 <div align="center" style="display: flex; justify-content: space-around;">
   <a href="https://ayukiyoshida.github.io/tips/">
-      <img src="docs/images/tips.png" alt="french-fry" style="width: auto; height: 72px; object-fit: contain;"/>
+      <img src="src/content/docs/images/tips.png" alt="french-fry" style="width: auto; height: 72px; object-fit: contain;"/>
   </a>
   <a href="https://zenn.dev/jyoppomu">
-      <img src="docs/images/zenn-logo.png" alt="zenn-logo" style="width: auto; height: 72px; object-fit: contain;"/>
+      <img src="src/content/docs/images/zenn-logo.png" alt="zenn-logo" style="width: auto; height: 72px; object-fit: contain;"/>
   </a>
   <a href="https://qiita.com/jyoppomu">
-      <img src="docs/images/qitta-logo.png" alt="qiita-log" style="width: auto; height: 72px; object-fit: contain;"/>
+      <img src="src/content/docs/images/qitta-logo.png" alt="qiita-log" style="width: auto; height: 72px; object-fit: contain;"/>
   </a>
 </div>
 
@@ -37,12 +37,12 @@
 
 ## Commands
 
-### for MKDocs
+### for Astro (documentation)
 
 - Start the live-reloading docs server
 
   ```shell
-  mise run preview:docs
+  npm run preview:docs
   ```
 
 - Build the documentations
@@ -96,14 +96,15 @@
 ## Project Layout
 
 ```text
-docs/             # Articles for MkDocs
+src/content/docs/ # Articles for Astro (Starlight)
     index.md      # The documentation homepage.
-    ...           # Other markdown pages, images and other files.
+    ...           # Other markdown pages and co-located images.
 articles/         # Articles for Zenn
 books/            # Books for Zenn
 public/           # Articles for Qiita
 slides/           # Slides for Marp
-mkdocs.yml        # Configuration file for MkDocs
+static/           # Static assets (favicon etc.) served by Astro
+astro.config.mjs  # Configuration file for Astro + Starlight
 .marprc.yml       # Configuration file for Marp
 qiita.config.json # Configuration file for Qiita CLI
 ```
@@ -132,8 +133,8 @@ qiita.config.json # Configuration file for Qiita CLI
 
 ## Guide
 
-- MkDocs
-  - <https://www.mkdocs.org/>
+- Astro / Starlight
+  - <https://starlight.astro.build/>
 - Marp
   - <https://marp.app/>
 - Zenn

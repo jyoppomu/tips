@@ -1,26 +1,5 @@
 [env]
-_.path = ["{{config_root}}/.venv/bin", "{{config_root}}/node_modules/.bin"]
+_.path = ["{{config_root}}/node_modules/.bin"]
 
 [tools]
-python = "3.10"
 node = "22.18.0"
-poetry = "1.8.2"
-
-[hooks]
-postinstall = ["mise run setup"]
-
-[tasks."setup:nodejs"]
-run = "npm install"
-hide = true
-
-[tasks."setup:python"]
-run = "poetry install"
-hide = true
-
-[tasks.setup]
-depends = ["setup:*"]
-hide = true
-
-[tasks."preview:docs"]
-description = "Preview documentation with MkDocs"
-run = "mkdocs serve"

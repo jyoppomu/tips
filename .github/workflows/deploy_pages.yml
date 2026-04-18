@@ -5,11 +5,12 @@ on:
     branches:
       - main
     paths:
-      - 'docs/**/*'
-      - 'mkdocs.yml'
+      - 'src/**/*'
+      - 'astro.config.mjs'
       - 'slides/**/*'
       - '.marprc.yml'
       - 'scripts/engine.mjs'
+      - 'static/**/*'
   workflow_dispatch:
 
 permissions:
@@ -20,10 +21,6 @@ permissions:
 concurrency:
   group: "pages"
   cancel-in-progress: false
-
-env:
-  NODE_VERSION: "22.x"
-  PYTHON_VERSION: "3.10"
 
 jobs:
   build:
@@ -41,32 +38,17 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
-      - name: Install Poetry
-        run: |
-          curl -sSL https://install.python-poetry.org | python3 -
-
-      - name: Setup Python
-        uses: actions/setup-python@v6
-        with:
-          python-version: ${{ env.PYTHON_VERSION }}
-          cache: 'poetry'
-
-      - name: Install dependencies for Python
-        run: |
-          poetry install --no-root
-
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: ${{ env.NODE_VERSION }}
+          node-version-file: '.node-version'
           cache: 'npm'
 
-      - name: Install dependencies for Node.js
+      - name: Install dependencies
         run: npm install
 
       - name: Build site
-        run: |
-          npm run build:site
+        run: npm run build:site
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
