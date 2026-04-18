@@ -7,7 +7,6 @@ on:
     paths:
       - 'src/**/*'
       - 'astro.config.mjs'
-      - 'slides/**/*'
       - '.marprc.yml'
       - 'scripts/engine.mjs'
       - 'static/**/*'
