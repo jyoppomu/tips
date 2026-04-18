@@ -16,10 +16,6 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: false
 
-env:
-  PYTHON_VERSION: "3.10"
-  NODE_VERSION: "18.15.0"
-
 jobs:
   sync:
     runs-on: ubuntu-latest
@@ -31,31 +27,19 @@ jobs:
           git config --global user.email actions@github.com
 
       - name: Checkout main branch in repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           ref: 'main'
           fetch-depth: 0
 
-      - name: Install Poetry
-        run: |
-          curl -sSL https://install.python-poetry.org | python3 -
-
-      - name: Setup Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: ${{ env.PYTHON_VERSION }}
-          cache: 'poetry'
-
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v6
         with:
-          node-version: ${{ env.NODE_VERSION }}
+          node-version-file: '.node-version'
           cache: 'npm'
 
       - name: Install dependencies
-        run: |
-          npm install
-          poetry install
+        run: npm install
 
       - name: Setup Qiita CLI
         env:
@@ -70,7 +54,7 @@ jobs:
           for file in ${files[@]}; do
             if [[ $file =~ ^articles/.*\.md$ ]]; then
               article_id=$(echo $file | sed -e 's/articles\/\(.*\)\.md/\1/')
-              poetry run poe z2q $article_id
+              npm run z2q -- $article_id
             fi
           done
 
