@@ -23,7 +23,8 @@
     "prepare": "npm-run-all prepare:*",
     "prepare:husky": "husky",
     "z2q": "tsx scripts/z2q.ts",
-    "typecheck": "tsc --noEmit",
+    "check": "tsc --noEmit",
+    "pretest": "failsafe check",
     "test": "vitest run"
   },
   "lint-staged": {
@@ -51,7 +52,6 @@
     "markdown-it-ins": "^4.0.0",
     "markdown-it-mark": "^4.0.0",
     "markdown-it-prism": "^2.3.1",
-    "npm-failsafe": "^1.4.0",
     "rimraf": "^6.0.1",
     "zenn-cli": "^0.3.1"
   },
@@ -59,6 +59,7 @@
     "@types/node": "^25.6.0",
     "husky": "^9.1.7",
     "lint-staged": "^15.2.11",
+    "npm-failsafe": "^1.4.0",
     "npm-run-all": "^4.1.5",
     "prettier": "^3.4.2",
     "prettier-plugin-toml": "^2.0.1",
