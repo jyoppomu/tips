@@ -9,8 +9,8 @@
   },
   "scripts": {
     "prebuild:slides": "rimraf --glob dist/slides",
-    "build:slides": "marp --config .marprc.yml -I slides/src -o dist/slides",
-    "postbuild:slides": "node scripts/assets.mjs --src slides/src --out dist/slides",
+    "build:slides": "marp --config .marprc.yml -I src/content/slides/src -o dist/slides",
+    "postbuild:slides": "node scripts/assets.mjs --src src/content/slides/src --out dist/slides",
     "prebuild:docs": "failsafe check:astro",
     "build:docs": "astro build",
     "build:site": "failsafe build:docs build:slides",
