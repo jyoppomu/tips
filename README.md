@@ -96,14 +96,13 @@
 ## Project Layout
 
 ```text
-src/content/docs/ # Articles for Astro (Starlight)
-    index.md      # The documentation homepage.
-    ...           # Other markdown pages and co-located images.
+src/content/
+  docs/           # Articles for Astro (Starlight)
+  slides/         # Slides for Marp
 articles/         # Articles for Zenn
 books/            # Books for Zenn
 public/           # Articles for Qiita
-src/content/slides/ # Slides for Marp
-static/           # Static assets (favicon etc.) served by Astro
+assets/           # Static assets (favicon etc.) served by Astro
 astro.config.mjs  # Configuration file for Astro + Starlight
 .marprc.yml       # Configuration file for Marp
 qiita.config.json # Configuration file for Qiita CLI
