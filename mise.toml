@@ -21,41 +21,9 @@ hide = true
 depends = ["setup:*"]
 hide = true
 
-[tasks."create:zenn"]
-description = "Create a new article for Zenn"
-run = "zenn new:article"
-
-[tasks."create:qiita"]
-description = "Create a new article for Qiita"
-run = "qiita new"
-
-[tasks."build:docs"]
-description = "Build documentation with MkDocs"
-run = "npm run build:docs"
-
-[tasks."build:slides"]
-description = "Build slides with Marp"
-run = "npm run build:slides"
-
-[tasks."build:site"]
-description = "Build entire site (docs and slides)"
-run = "npm run build:site"
-
 [tasks."preview:docs"]
 description = "Preview documentation with MkDocs"
 run = "mkdocs serve"
-
-[tasks."preview:slides"]
-description = "Preview slides with Marp"
-run = "marp slides/src --config .marprc.yml --server"
-
-[tasks."preview:zenn"]
-description = "Preview articles for Zenn"
-run = "zenn preview --port 3000"
-
-[tasks."preview:qiita"]
-description = "Preview articles for Qiita"
-run = "qiita preview"
 
 [tasks.z2q]
 description = "Convert article for Zenn to that for Qiita"

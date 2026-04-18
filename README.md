@@ -25,15 +25,15 @@
 
 1. Derive source code
 
-    ```shell
-    git clone git@github.com:aYukiYoshida/tips.git
-    ```
+   ```shell
+   git clone git@github.com:aYukiYoshida/tips.git
+   ```
 
 2. Install packages
 
-    ```shell
-    mise install
-    ```
+   ```shell
+   mise install
+   ```
 
 ## Commands
 
@@ -48,7 +48,7 @@
 - Build the documentations
 
   ```shell
-  mise run build:docs
+  npm run build:docs
   ```
 
 ### for Marp
@@ -56,13 +56,13 @@
 - Start the live-reloading slides server
 
   ```shell
-  mise run preview:slides
+  npm run preview:slides
   ```
 
 - Build the slides
 
   ```shell
-  mise run build:slides
+  npm run build:slides
   ```
 
 ### for Zenn
@@ -70,13 +70,13 @@
 - Create a new article
 
   ```shell
-  mise run create:zenn
+  npm run create:zenn
   ```
 
 - Start the live-reloading docs server
 
   ```shell
-  mise run preview:zenn
+  npm run preview:zenn
   ```
 
 ### for Qiita
@@ -84,13 +84,13 @@
 - Create a new article
 
   ```shell
-  mise run create:qiita <BASE_NAME>
+  npm run create:qiita -- <BASE_NAME>
   ```
 
 - Start the live-reloading docs server
 
   ```shell
-  mise run preview:qiita
+  npm run preview:qiita
   ```
 
 ## Project Layout

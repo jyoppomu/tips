@@ -13,6 +13,12 @@
     "prebuild:docs": "rimraf --glob site",
     "build:docs": "poetry run mkdocs build -d site",
     "build:site": "failsafe build:docs build:slides",
+    "create:zenn": "zenn new:article",
+    "create:qiita": "qiita new",
+    "preview:slides": "marp slides/src --config .marprc.yml --server",
+    "preview:docs": "echo \"Error: no preview command specified for docs\" && exit 1",
+    "preview:zenn": "zenn preview --port 3000",
+    "preview:qiita": "qiita preview",
     "prepare": "npm-run-all prepare:*",
     "prepare:husky": "husky",
     "test": "echo \"Error: no test specified\" && exit 1"
