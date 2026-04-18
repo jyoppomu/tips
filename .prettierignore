@@ -1,5 +1,4 @@
 node_modules/
-site/
 public/
 dist/
 .venv/

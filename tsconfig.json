@@ -4,5 +4,5 @@
     "types": ["node"],
     "noImplicitOverride": true
   },
-  "exclude": ["node_modules", "site", "public", "articles", "dist", ".venv"]
+  "exclude": ["node_modules", "public", "articles", "dist"]
 }

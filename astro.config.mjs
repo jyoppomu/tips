@@ -6,7 +6,7 @@ import remarkMath from "remark-math";
 export default defineConfig({
   site: "https://jyoppomu.github.io",
   base: "/tips",
-  outDir: "./site",
+  outDir: "./dist",
   publicDir: "./static",
   markdown: {
     remarkPlugins: [remarkMath],

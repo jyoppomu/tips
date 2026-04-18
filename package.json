@@ -8,9 +8,9 @@
     "doc": "docs"
   },
   "scripts": {
-    "prebuild:slides": "rimraf --glob site/slides",
-    "build:slides": "marp --config .marprc.yml -I slides/src -o site/slides",
-    "postbuild:slides": "node scripts/assets.mjs --src slides/src --out site/slides",
+    "prebuild:slides": "rimraf --glob dist/slides",
+    "build:slides": "marp --config .marprc.yml -I slides/src -o dist/slides",
+    "postbuild:slides": "node scripts/assets.mjs --src slides/src --out dist/slides",
     "build:docs": "astro build",
     "build:site": "failsafe build:docs build:slides",
     "create:zenn": "zenn new:article",
