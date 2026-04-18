@@ -10,8 +10,6 @@ package-mode = false
 python = "^3.10"
 mkdocs = "^1.5.2"
 mkdocs-material = "^8.3.8"
-pydantic = "^2.4.0"
-pydantic-settings = "^2.0.3"
 
 [tool.poetry.group.dev.dependencies]
 ipykernel = "^6.25.2"
@@ -22,10 +20,6 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poe.executor]
 type = "poetry"
-
-[tool.poe.tasks.z2q]
-cmd = "python scripts/z2q.py"
-help = "Convert article for Zenn to that for Qiita"
 
 [tool.poe.tasks."build:docs"]
 cmd = "mkdocs build"
