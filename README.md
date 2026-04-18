@@ -1,21 +1,9 @@
 # TIPS
 
-[![Astro](https://img.shields.io/badge/Astro-Starlight-ff5d01.svg)](https://starlight.astro.build/)
-
-## Articles
-
-<!-- markdownlint-disable MD033 -->
-<div align="center" style="display: flex; justify-content: space-around;">
-  <a href="https://ayukiyoshida.github.io/tips/">
-      <img src="assets/images/tips.png" alt="french-fry" style="width: auto; height: 72px; object-fit: contain;"/>
-  </a>
-  <a href="https://zenn.dev/jyoppomu">
-      <img src="https://static.zenn.studio/images/logo.png" alt="zenn-logo" style="width: auto; height: 72px; object-fit: contain;"/>
-  </a>
-  <a href="https://qiita.com/jyoppomu">
-      <img src="assets/images/qitta-logo.png" alt="qiita-log" style="width: auto; height: 72px; object-fit: contain;"/>
-  </a>
-</div>
+[![Astro](https://img.shields.io/badge/Astro-Starlight-ff5d01.svg?logo=astro&logoColor=white)](https://starlight.astro.build/)
+[![Marp](https://img.shields.io/badge/Marp-darkslategray.svg?logo=marp&logoColor=white)](https://marp.app/)
+[![Zenn](https://img.shields.io/badge/Zenn-3EA8FF.svg?logo=zenn&logoColor=white)](https://zenn.dev/jyoppomu)
+[![Qiita](https://img.shields.io/badge/Qiita-55C500.svg?logo=qiita&logoColor=white)](https://qiita.com/jyoppomu)
 
 ## Requirements
 
