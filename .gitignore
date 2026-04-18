@@ -281,3 +281,6 @@ dist
 
 # qiita
 .remote
+
+# Astro
+.astro/
