@@ -19,21 +19,13 @@
 
 ## Requirements
 
-- [mise](https://mise.jdx.dev/)
+- [Node.js](https://nodejs.org/) (see [.node-version](./.node-version))
 
 ## Setup
 
-1. Derive source code
-
-   ```shell
-   git clone git@github.com:aYukiYoshida/tips.git
-   ```
-
-2. Install packages
-
-   ```shell
-   mise install
-   ```
+```shell
+npm install
+```
 
 ## Commands
 

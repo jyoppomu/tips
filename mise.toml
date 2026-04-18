@@ -1,5 +1,0 @@
-[env]
-_.path = ["{{config_root}}/node_modules/.bin"]
-
-[tools]
-node = "22.18.0"
