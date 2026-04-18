@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "## Link to deployed page",
   "main": "index.js",
+  "type": "module",
   "directories": {
     "doc": "docs"
   },
@@ -21,7 +22,9 @@
     "preview:qiita": "qiita preview",
     "prepare": "npm-run-all prepare:*",
     "prepare:husky": "husky",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "z2q": "tsx scripts/z2q.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
   },
   "lint-staged": {
     "*.{js,mjs,cjs,ts,tsx,json,yml,yaml,md,css,toml}": "prettier --write"
@@ -53,10 +56,16 @@
     "zenn-cli": "^0.3.1"
   },
   "devDependencies": {
+    "@types/node": "^25.6.0",
     "husky": "^9.1.7",
     "lint-staged": "^15.2.11",
     "npm-run-all": "^4.1.5",
     "prettier": "^3.4.2",
-    "prettier-plugin-toml": "^2.0.1"
+    "prettier-plugin-toml": "^2.0.1",
+    "tsx": "^4.21.0",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.4",
+    "yaml": "^2.8.3",
+    "zod": "^4.3.6"
   }
 }

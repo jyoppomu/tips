@@ -24,7 +24,3 @@ hide = true
 [tasks."preview:docs"]
 description = "Preview documentation with MkDocs"
 run = "mkdocs serve"
-
-[tasks.z2q]
-description = "Convert article for Zenn to that for Qiita"
-run = "python scripts/z2q.py"
