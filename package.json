@@ -15,7 +15,7 @@
     "build:site": "failsafe build:docs build:slides",
     "create:zenn": "zenn new:article",
     "create:qiita": "qiita new",
-    "preview:slides": "marp slides/src --config .marprc.yml --server",
+    "preview:slides": "marp src/content/slides/src --config .marprc.yml --server",
     "preview:docs": "astro dev",
     "preview:zenn": "zenn preview --port 3000",
     "preview:qiita": "qiita preview",
