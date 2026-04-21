@@ -1,3 +1,13 @@
-body {
+.sl-markdown-content body {
   font-family: "Noto Sans JP", sans-serif;
+}
+/* Starlight の Markdown テーブルを横スクロール可能にする */
+.sl-markdown-content table {
+  display: block;
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+.sl-markdown-content table :is(th, td) {
+  white-space: nowrap;
 }
