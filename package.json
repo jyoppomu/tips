@@ -13,7 +13,7 @@
     "postbuild:slides": "node scripts/assets.mjs --src src/content/slides/src --out dist/slides",
     "prebuild:docs": "failsafe check:astro",
     "build:docs": "astro build",
-    "build:site": "failsafe build:docs build:slides",
+    "build": "failsafe build:docs build:slides",
     "create:zenn": "zenn new:article",
     "create:qiita": "qiita new",
     "preview:slides": "marp src/content/slides/src --config .marprc.yml --server",
