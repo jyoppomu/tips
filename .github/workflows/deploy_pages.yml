@@ -6,14 +6,15 @@ on:
       - main
     paths:
       - 'src/**/*'
+      - 'package.json'
+      - 'package-lock.json'
       - 'astro.config.mjs'
       - '.marprc.yml'
       - 'scripts/engine.mjs'
-      - 'static/**/*'
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
   pages: write
   id-token: write
 
@@ -26,33 +27,26 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Configure Git
-        run: |
-          git config --global user.name "github-actions"
-          git config --global user.email actions@github.com
-
       - name: Checkout main branch in repository
-        uses: actions/checkout@v6
+        uses: actions/checkout@v6.0.3
 
-      - name: Setup Pages
+      - name: Determine versions to use
+        id: determine-versions
+        run: echo "node-version=$(cat .node-version)" >> $GITHUB_OUTPUT
+
+      - name: Configure Pages
+        id: configure-pages
         uses: actions/configure-pages@v6
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v6
+      - name: Install, build, and upload your site
+        uses: withastro/action@v6.1.1
         with:
-          node-version-file: '.node-version'
-          cache: 'npm'
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Build site
-        run: npm run build:site
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v5
-        with:
-          path: 'dist'
+          node-version: ${{ steps.determine-versions.outputs.node-version }}
+          package-manager: npm@11.9.0
+        env:
+          # configure-pages が解決した値を astro.config.mjs に渡す
+          BASE_URL: ${{ steps.configure-pages.outputs.origin }}
+          BASE_PATH: ${{ steps.configure-pages.outputs.base_path }}
 
   deploy:
     needs: build
@@ -63,4 +57,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v5
+        uses: actions/deploy-pages@v5.0.0

@@ -4,8 +4,8 @@ import rehypeKatex from "rehype-katex";
 import remarkMath from "remark-math";
 
 export default defineConfig({
-  site: "https://jyoppomu.github.io",
-  base: "/tips",
+  site: process.env.BASE_URL,
+  base: process.env.BASE_PATH ?? "/",
   outDir: "./dist",
   publicDir: "./assets",
   markdown: {
