@@ -9,7 +9,6 @@ sidebar:
 | title                                                             | on-air datetime | Broadcaster | comments     |
 | :---------------------------------------------------------------- | :-------------- | :---------- | :----------- |
 | [サバ缶、宇宙へ行く](https://www.fujitv.co.jp/sabauchu/)          | 月21            | フジ        | 4/13放送開始 |
-| [銀河の一票](https://www.ktv.jp/ginganoippyou/)                   | 月22            | フジ        | 4/20放送開始 |
 | [リボーン 〜最後のヒーロー〜](https://www.tv-asahi.co.jp/reborn/) | 火21            | テレ朝      | 4/14放送開始 |
 | [田鎖ブラザーズ](https://www.tbs.co.jp/TAGUSARI_bros/)            | 金22            | TBS         | 4/17放送開始 |
 
