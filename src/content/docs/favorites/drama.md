@@ -4,6 +4,14 @@ sidebar:
   hidden: true
 ---
 
+## 2026/07-09 season
+
+| title                                                                | on-air datetime | Broadcaster | comments     |
+| :------------------------------------------------------------------- | :-------------- | :---------- | :----------- |
+| [Tシャツが乾くまで](https://www.tbs.co.jp/tshirt_ga_kawakumade_tbs/) | 金22            | TBS         | 7/10放送開始 |
+| [VIVANT](https://www.tbs.co.jp/VIVANT_tbs/)                          | 日21            | TBS         | 7/26放送開始 |
+| [一次元の挿し木](https://www.ytv.co.jp/ichijigen_drama/)             | 日22            | 日テレ      | 7/5放送開始  |
+
 ## 2026/04-06 season
 
 | title                                                             | on-air datetime | Broadcaster | comments     |
