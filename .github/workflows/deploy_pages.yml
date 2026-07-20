@@ -45,7 +45,7 @@ jobs:
           package-manager: npm@11.9.0
         env:
           # configure-pages が解決した値を astro.config.mjs に渡す
-          BASE_URL: ${{ steps.configure-pages.outputs.origin }}
+          BASE_URL: ${{ steps.configure-pages.outputs.base_url }}
           BASE_PATH: ${{ steps.configure-pages.outputs.base_path }}
 
   deploy:
