@@ -4,6 +4,15 @@ sidebar:
   hidden: true
 ---
 
+## 2026/10-12 season
+
+| title                                                       | on-air datetime | Broadcaster | comments      |
+| :---------------------------------------------------------- | :-------------- | :---------- | :------------ |
+| [ポリティカルパン](https://www.fujitv.co.jp/politicalupin/) | 水22            | フジ        | 10/7放送開始  |
+| [LOST10](https://www.tbs.co.jp/lost10/)                     | 金22            | TBS         | 10/16放送開始 |
+| [俺たちの箱根駅伝](https://www.ntv.co.jp/orehako/)          | 土21            | 日テレ      | 10/10放送開始 |
+| [VIVANT](https://www.tbs.co.jp/VIVANT_tbs/)                 | 日21            | TBS         | 10/26放送開始 |
+
 ## 2026/07-09 season
 
 | title                                                                | on-air datetime | Broadcaster | comments     |
