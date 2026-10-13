@@ -85,9 +85,9 @@ $$
 
 例えば、ビールの売り上げを以下のような線形回帰モデルで表現したとする。
 
-```math
-ビールの売り上げ = 傾き\times 気温 + 切片
-```
+$$
+\text{ビールの売り上げ} = \text{傾き}\times \text{気温} + \text{切片}
+$$
 
 この時のベイズの定理の$X$には、「気温のデータ」が入り、 $\theta$ は「傾き」と「切片」が入る。
 しかし、推定すべきパラメータが2つもあると、少々話が複雑になってしまうので、
@@ -110,9 +110,9 @@ $$
 
 上記の例題によれば、線形回帰モデルは、以下の構造をとる。
 
-```math
-ビールの売り上げ = \theta\times 気温 + 3
-```
+$$
+\text{ビールの売り上げ} = \theta\times \text{気温} + 3
+$$
 
 さらに、ビールの売り上げは、正規分布に従うと仮定する。
 少々強引だが、さらにその正規分布の分散は4だとわかっていると仮定する。
@@ -125,7 +125,7 @@ $$
 
 $$
 \begin{aligned}
-f\left(気温|\theta\right) &= \mathcal{N}(\theta\times 気温 + 3, 4)
+f\left(\text{気温}|\theta\right) &= \mathcal{N}(\theta\times \text{気温} + 3, 4)
 \end{aligned}
 $$
 
@@ -133,7 +133,7 @@ $気温=X$なので、ベイズの定理に代入すると、以下のように�
 
 $$
 \begin{aligned}
-f\left(\theta|気温\right) &= \frac{\mathcal{N}(\theta\times 気温 + 3, 4)f(\theta)}{f(気温)}
+f\left(\theta|\text{気温}\right) &= \frac{\mathcal{N}(\theta\times \text{気温} + 3, 4)f(\theta)}{f(\text{気温})}
 \end{aligned}
 $$
 

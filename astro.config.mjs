@@ -1,3 +1,4 @@
+import { unified } from "@astrojs/markdown-remark";
 import starlight from "@astrojs/starlight";
 import { defineConfig } from "astro/config";
 import rehypeKatex from "rehype-katex";
@@ -8,10 +9,10 @@ export default defineConfig({
   base: process.env.BASE_PATH ?? "/",
   outDir: "./dist",
   publicDir: "./assets",
-  markdown: {
+  markdown: unified({
     remarkPlugins: [remarkMath],
     rehypePlugins: [[rehypeKatex, { strict: "ignore" }]],
-  },
+  }),
   integrations: [
     starlight({
       title: "TIPS",

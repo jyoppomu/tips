@@ -61,6 +61,7 @@
     "@astrojs/starlight": "^0.41.3",
     "@types/node": "^25.6.0",
     "astro": "^7.3.2",
+    "cookie": "^2.0.1",
     "husky": "^9.1.7",
     "katex": "^0.16.45",
     "lint-staged": "^15.2.11",
